@@ -18,7 +18,7 @@ export const PhotoSearchContextProvider = ({children}) => {
         const { results } = feed;
         setPics(results);
         if(results.length === 0){
-          toast.success('No Images Found!', { autoClose: 3000 })
+          toast.error('No Images Found!', { autoClose: 3000 })
         }
       });
   };
