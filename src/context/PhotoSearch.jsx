@@ -1,5 +1,6 @@
 import { useContext,createContext, useState} from "react";
 import { createApi } from "unsplash-js";
+import { toast } from 'react-toastify';
 
 export const PhotoSearchContext = createContext();
 
@@ -16,6 +17,9 @@ export const PhotoSearchContextProvider = ({children}) => {
         const feed = json.response;
         const { results } = feed;
         setPics(results);
+        if(results.length === 0){
+          toast.success('No Images Found!', { autoClose: 3000 })
+        }
       });
   };
 
