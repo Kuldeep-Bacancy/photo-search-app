@@ -24,7 +24,7 @@ export const PhotoSearchContextProvider = ({children}) => {
   };
 
   return(
-    <PhotoSearchContext.Provider value={{ searchText, setSearchText, pics, setPics, searchPhotos}}>
+    <PhotoSearchContext.Provider value={{ searchText, setSearchText, pics, setPics, searchPhotos }}>
       {children}
     </PhotoSearchContext.Provider>
   )
